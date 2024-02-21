@@ -1,6 +1,8 @@
 import { bodyFont, displayFont } from '#/config/fonts.config';
 import cx from 'classix';
 
+import { CoreHeader } from '#/components/core-header.components';
+
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
@@ -19,8 +21,8 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang='en'>
       <body className={cx(bodyFont.variable, displayFont.variable)}>
-        <span>WAY</span>
-        {children}
+        <CoreHeader />
+        <main>{children}</main>
       </body>
     </html>
   );
