@@ -19,7 +19,7 @@ export const CoreNavItem = memo(function ({
   return (
     <Link
       className={cx(
-        'font-display min-w-[124px] px-6 font-bold uppercase',
+        'hover:text-primary min-w-[124px] px-6 font-bold uppercase transition-colors',
         active && 'text-primary',
         className,
       )}

@@ -1,7 +1,7 @@
 import { bodyFont, displayFont } from '#/config/fonts.config';
 import cx from 'classix';
 
-import { CoreHeader } from '#/components/core-header.components';
+import { CoreHeader } from '#/components/core/core-header.components';
 
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';

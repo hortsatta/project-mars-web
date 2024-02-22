@@ -1,5 +1,9 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
+
 import type { Config } from 'tailwindcss';
+
+const colorWhite = '232 206 211';
+const colorPrimary = '215 92 84';
 
 const config: Config = {
   content: [
@@ -10,13 +14,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        white: '#e8ced3',
+        white: {
+          DEFAULT: `rgb(${colorWhite})`,
+          border: `rgb(${colorWhite} / 0.3)`,
+        },
         primary: {
-          DEFAULT: '#d75c54',
+          DEFAULT: `rgb(${colorPrimary})`,
+          border: `rgb(${colorPrimary} / 0.5)`,
         },
-        backdrop: {
-          DEFAULT: '#0c0507',
-        },
+        backdrop: '#0c0507',
       },
       fontFamily: {
         body: ['var(--font-body)', ...defaultTheme.fontFamily.sans],

@@ -10,6 +10,11 @@ export const bodyFont: NextFontWithVariable = localFont({
       weight: '400',
       style: 'normal',
     },
+    {
+      path: '../assets/fonts/body-700.woff2',
+      weight: '700',
+      style: 'normal',
+    },
   ],
 });
 
@@ -20,11 +25,6 @@ export const displayFont: NextFontWithVariable = localFont({
     {
       path: '../assets/fonts/display-400.woff2',
       weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../assets/fonts/display-700.woff2',
-      weight: '700',
       style: 'normal',
     },
   ],
