@@ -1,41 +1,13 @@
-import { memo, useCallback, useMemo } from 'react';
+import { memo, useMemo } from 'react';
 import cx from 'classix';
 
+import { headerNavItems } from '#/nav-menu';
 import { generateWeather } from '#/helpers/randomize.helper';
-import { WeatherType } from '#/models/base.model';
 import { BaseIconButton } from '../base/base-icon-button.component';
 import { CoreNav } from './core-nav.components';
 import { CoreWeatherCard } from './core-weather-card.component';
 
 import type { ComponentProps } from 'react';
-import type { Weather } from '#/models/base.model';
-
-const navItems = [
-  {
-    href: '/destinations',
-    name: 'destinations',
-    label: 'Destinations',
-  },
-  {
-    href: '/technology',
-    name: 'technology',
-    label: 'Technology',
-  },
-  {
-    href: '/',
-    name: 'home',
-  },
-  {
-    href: '/blast-offs',
-    name: 'blast-offs',
-    label: 'Blast Offs',
-  },
-  {
-    href: '/expeditions',
-    name: 'expeditions',
-    label: 'My Expeditions',
-  },
-];
 
 export const CoreHeader = memo(function ({
   className,
@@ -46,14 +18,14 @@ export const CoreHeader = memo(function ({
   return (
     <header
       className={cx(
-        'flex min-h-[90px] items-center justify-between px-10',
+        'relative z-10 flex min-h-[90px] items-center justify-between px-10',
         className,
       )}
       {...moreProps}
     >
-      <CoreWeatherCard className='min-w-[100px]' weather={weather} />
-      <CoreNav items={navItems} />
-      <div className='flex min-w-[100px] items-center justify-end'>
+      <CoreWeatherCard className='min-w-[118px]' weather={weather} />
+      <CoreNav items={headerNavItems} />
+      <div className='flex min-w-[118px] items-center justify-end'>
         <BaseIconButton name='magnifying-glass' />
         {/* TODO onclick and modal */}
       </div>

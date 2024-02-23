@@ -13,6 +13,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      width: {
+        fhd: '1920px',
+      },
       colors: {
         white: {
           DEFAULT: `rgb(${colorWhite})`,
@@ -27,6 +30,26 @@ const config: Config = {
       fontFamily: {
         body: ['var(--font-body)', ...defaultTheme.fontFamily.sans],
         display: ['var(--font-display)'],
+      },
+      keyframes: {
+        rainbow: {
+          '0%': { filter: 'hue-rotate(0deg)', opacity: '1' },
+          '25%': { filter: 'hue-rotate(90deg)', opacity: '0.2' },
+          '50%': { filter: 'hue-rotate(180deg)', opacity: '1' },
+          '75%': { filter: 'hue-rotate(270deg)', opacity: '0.2' },
+          '100%': { filter: 'hue-rotate(360deg)', opacity: '1' },
+        },
+        fade: {
+          '0%': { opacity: '0' },
+          '25%': { opacity: '1' },
+          '50%': { opacity: '0' },
+          '75%': { opacity: '1' },
+          '100%': { opacity: '0' },
+        },
+      },
+      animation: {
+        rainbow: 'rainbow 5s linear infinite',
+        fade: 'fade 5s linear infinite',
       },
     },
   },
