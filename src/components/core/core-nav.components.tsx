@@ -28,8 +28,8 @@ const HomeLink = memo(function ({ href }: HomeLinkProps) {
       <Image
         src={logoPng}
         alt='logo'
-        width={255}
-        height={17}
+        width={256}
+        height={50}
         loading='eager'
         priority
       />

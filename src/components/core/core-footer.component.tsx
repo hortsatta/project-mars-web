@@ -45,16 +45,16 @@ export const CoreFooter = memo(function ({
       )}
     >
       <div className='flex flex-col gap-7'>
-        <div className='flex items-center gap-7'>
+        <div className='flex items-end gap-7'>
           <Image
             src={logoPng}
             alt='footer logo'
-            width={255}
-            height={17}
+            width={256}
+            height={50}
             loading='eager'
             priority
           />
-          <span className='font-display text-sm uppercase'>
+          <span className='font-display text-sm uppercase leading-none'>
             Copyright © {currentYear}
           </span>
         </div>

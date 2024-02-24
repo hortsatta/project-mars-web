@@ -6,6 +6,7 @@ import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import cx from 'classix';
 
 import { useParallax } from '#/hooks/use-parallax.hook';
+import { HomeHeroOrbitalDrops } from './home-hero-orbital-drops.component';
 
 import type { ComponentProps } from 'react';
 
@@ -44,7 +45,7 @@ type ParallaxImageWrapperProps = ComponentProps<typeof motion.div> & {
   parallaxDistance: number;
 };
 
-function ParallaxImageWrapper({
+const ParallaxImageWrapper = memo(function ({
   parallaxDistance,
   children,
   ...moreProps
@@ -59,7 +60,7 @@ function ParallaxImageWrapper({
       {children}
     </motion.div>
   );
-}
+});
 
 export const HomeHeroSection = memo(function ({
   className,
@@ -73,7 +74,7 @@ export const HomeHeroSection = memo(function ({
   });
 
   return (
-    <div className={cx('w-fhd relative h-[915px]', className)} {...moreProps}>
+    <div className={cx('relative h-[915px] w-fhd', className)} {...moreProps}>
       <ParallaxImageWrapper
         className={imageWrapperStartClassName}
         parallaxDistance={2200}
@@ -87,18 +88,10 @@ export const HomeHeroSection = memo(function ({
         />
       </ParallaxImageWrapper>
       <ParallaxImageWrapper
-        className='absolute left-0 top-[200px] flex w-full flex-col items-center gap-4'
-        parallaxDistance={1300}
+        className={imageWrapperStartClassName}
+        parallaxDistance={2200}
       >
-        <h1 className='font-display text-base font-normal tracking-[5px]'>
-          The Only Way to
-        </h1>
-        <div
-          style={textWrapperStyle}
-          className='flex h-[96px] w-[1080px] justify-center bg-no-repeat'
-        >
-          <h1 className='text-[130px] leading-[0.65]'>Tour the Red Planet</h1>
-        </div>
+        <HomeHeroOrbitalDrops className='absolute left-1/2 top-0 h-full w-[1120px] -translate-x-1/2' />
       </ParallaxImageWrapper>
       <ParallaxImageWrapper
         className={imageWrapperEndClassName}
@@ -123,6 +116,20 @@ export const HomeHeroSection = memo(function ({
           height={563}
           {...imageProps}
         />
+      </ParallaxImageWrapper>
+      <ParallaxImageWrapper
+        className='absolute left-0 top-[200px] flex w-full flex-col items-center gap-4'
+        parallaxDistance={1300}
+      >
+        <h1 className='font-display text-base font-normal tracking-[5px]'>
+          The Only Way to
+        </h1>
+        <div
+          style={textWrapperStyle}
+          className='flex h-[96px] w-[1080px] justify-center bg-no-repeat'
+        >
+          <h1 className='text-[130px] leading-[0.65]'>Tour the Red Planet</h1>
+        </div>
       </ParallaxImageWrapper>
       <ParallaxImageWrapper
         className={imageWrapperEndClassName}
@@ -163,7 +170,7 @@ export const HomeHeroSection = memo(function ({
             alt='home hero crystal monochrome'
             width={188}
             height={163}
-            className='animate-fade absolute left-0 top-0'
+            className='absolute left-0 top-0 animate-fade'
             {...imageProps}
           />
           <Image
@@ -171,7 +178,7 @@ export const HomeHeroSection = memo(function ({
             alt='home hero crystal'
             width={188}
             height={163}
-            className='animate-rainbow relative z-10'
+            className='relative z-10 animate-rainbow'
             {...imageProps}
           />
         </div>
@@ -202,7 +209,10 @@ export const HomeHeroSection = memo(function ({
           {...imageProps}
         />
       </ParallaxImageWrapper>
-      <div className={imageWrapperEndClassName}>
+      <ParallaxImageWrapper
+        className={imageWrapperEndClassName}
+        parallaxDistance={200}
+      >
         <Image
           src={homeHeroGradient1Png}
           alt='home hero gradient 1'
@@ -211,7 +221,7 @@ export const HomeHeroSection = memo(function ({
           {...imageProps}
         />
         <div className='h-[47px] w-full bg-backdrop' />
-      </div>
+      </ParallaxImageWrapper>
     </div>
   );
 });

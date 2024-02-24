@@ -1,5 +1,5 @@
 {
-  "name": "scarlet-web",
+  "name": "project-mars-web",
   "version": "0.1.0",
   "author": "Erwin Errol Calanuga",
   "private": true,
@@ -14,9 +14,11 @@
     "@phosphor-icons/react": "^2.0.15",
     "classix": "^2.1.36",
     "framer-motion": "^11.0.5",
+    "nanoid": "^5.0.6",
     "next": "14.1.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "usehooks-ts": "^2.15.1"
   },
   "devDependencies": {
     "@types/node": "^20",

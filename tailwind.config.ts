@@ -46,10 +46,23 @@ const config: Config = {
           '75%': { opacity: '1' },
           '100%': { opacity: '0' },
         },
+        drop: {
+          '0%': { transform: 'translateY(-100%)', opacity: '0' },
+          '20%': { opacity: '1' },
+          '70%': { opacity: '1' },
+          '100%': { transform: 'translateY(200%)', opacity: '0' },
+        },
+        blink: {
+          '0%': { filter: 'brightness(0.6)' },
+          '50%': { filter: 'brightness(1.2)' },
+          '100%': { filter: 'brightness(0.6)' },
+        },
       },
       animation: {
         rainbow: 'rainbow 5s linear infinite',
         fade: 'fade 5s linear infinite',
+        drop: 'drop 20s ease-out 1 forwards',
+        blink: 'blink 0.3s linear infinite',
       },
     },
   },

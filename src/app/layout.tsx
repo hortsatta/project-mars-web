@@ -14,7 +14,7 @@ type Props = {
 };
 
 export const metadata: Metadata = {
-  title: 'Scarlet',
+  title: 'Crimson Airways',
   description: 'The only way to tour the Red Planet.',
 };
 
