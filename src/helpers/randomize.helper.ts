@@ -1,4 +1,4 @@
-import { MarsLocation, WeatherType } from '#/models/base.model';
+import { MarsLocation, WeatherType } from '#/models/mars.model';
 
 export function getRandomInt(min: number, max: number) {
   const minCeiled = Math.ceil(min);
@@ -8,8 +8,8 @@ export function getRandomInt(min: number, max: number) {
 
 export function generateWeather() {
   const temp = getRandomInt(-225, 70);
-  const type = getRandomInt(0, WeatherType.__LENGTH) as WeatherType;
-  const location = getRandomInt(0, MarsLocation.__LENGTH) as MarsLocation;
+  const type = getRandomInt(0, WeatherType.__LENGTH - 1) as WeatherType;
+  const location = getRandomInt(0, MarsLocation.__LENGTH - 1) as MarsLocation;
 
   return {
     temp,

@@ -16,6 +16,9 @@ const config: Config = {
       width: {
         fhd: '1920px',
       },
+      borderRadius: {
+        '2sm': '4px',
+      },
       colors: {
         white: {
           DEFAULT: `rgb(${colorWhite})`,
@@ -25,7 +28,10 @@ const config: Config = {
           DEFAULT: `rgb(${colorPrimary})`,
           border: `rgb(${colorPrimary} / 0.5)`,
         },
-        backdrop: '#0c0507',
+        backdrop: {
+          DEFAULT: '#0c0507',
+          primary: '#b34f49',
+        },
       },
       fontFamily: {
         body: ['var(--font-body)', ...defaultTheme.fontFamily.sans],
@@ -66,6 +72,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')({ nocompatible: true })],
 };
 export default config;

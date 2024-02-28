@@ -3,7 +3,7 @@
 import { memo, useMemo } from 'react';
 import cx from 'classix';
 
-import { MarsLocation, WeatherType } from '#/models/base.model';
+import { WeatherType, MarsLocation } from '#/models/mars.model';
 import { BaseIcon } from '../base/base-icon.component';
 import {
   BaseTooltip,
@@ -12,7 +12,8 @@ import {
 } from '../base/base-tooltip.component';
 
 import type { ComponentProps } from 'react';
-import type { IconName, Weather } from '#/models/base.model';
+import type { IconName } from '#/models/base.model';
+import type { Weather } from '#/models/mars.model';
 
 type Props = ComponentProps<'article'> & {
   weather: Weather;

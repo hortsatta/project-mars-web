@@ -34,7 +34,7 @@ const OrbitalDrop = memo(function () {
   return (
     <div
       style={mainWrapperStyle}
-      className='animate-drop absolute top-0 w-[318px]'
+      className='absolute top-0 w-[318px] animate-drop'
     >
       <div style={subWrapperStyle}>
         <Image
@@ -53,7 +53,7 @@ const OrbitalDrop = memo(function () {
           height={278}
           quality={100}
           loading='eager'
-          className='animate-blink absolute left-0 top-0'
+          className='absolute left-0 top-0 animate-blink'
           priority
         />
       </div>
@@ -74,7 +74,7 @@ export const HomeHeroOrbitalDrops = memo(function (
       const excess = list.length - MAX_LENGTH;
       return excess > 0 ? list.slice(excess) : list;
     });
-  }, 10000);
+  }, 12000);
 
   useEffect(() => {
     setReady(true);

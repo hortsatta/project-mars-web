@@ -143,7 +143,10 @@ export const HomeHeroSection = memo(function ({
           {...imageProps}
         />
       </ParallaxImageWrapper>
-      <div className={imageWrapperEndClassName}>
+      <ParallaxImageWrapper
+        className={imageWrapperEndClassName}
+        parallaxDistance={500}
+      >
         <Image
           src={homeHeroLandscape1Png}
           alt='home hero landscape 1'
@@ -151,8 +154,11 @@ export const HomeHeroSection = memo(function ({
           height={568}
           {...imageProps}
         />
-      </div>
-      <div className='absolute left-[388px] top-[601px]'>
+      </ParallaxImageWrapper>
+      <ParallaxImageWrapper
+        className='absolute left-[388px] top-[601px]'
+        parallaxDistance={500}
+      >
         <div>
           <div className='absolute left-0 top-0 h-[163px] w-[188px]'>
             <Image
@@ -192,7 +198,7 @@ export const HomeHeroSection = memo(function ({
             {...imageProps}
           />
         </div>
-      </div>
+      </ParallaxImageWrapper>
       <ParallaxImageWrapper
         className='absolute right-0 top-[411px]'
         parallaxDistance={2200}
@@ -203,7 +209,7 @@ export const HomeHeroSection = memo(function ({
           width={1256}
           height={142}
           className={cx(
-            'transition-opacity duration-100',
+            'animate-pulse transition-opacity duration-100',
             !isSunVisible ? 'opacity-0' : 'opacity-100',
           )}
           {...imageProps}

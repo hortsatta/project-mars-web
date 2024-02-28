@@ -31,16 +31,16 @@ export const BaseIconButton = memo(
     return (
       <button
         ref={ref}
-        type='button'
         className={cx(
-          'rounded-sm px-2.5 py-1 transition-colors hover:text-primary',
+          'rounded-sm px-2.5 transition-colors hover:text-primary',
           variant === 'border'
-            ? 'border-white-border hover:border-primary-border border py-1.5'
+            ? 'border border-white-border py-1.5 hover:border-primary-border'
             : 'py-1',
-          disabled && '!pointer-events-none',
+          (loading || disabled) && '!pointer-events-none',
           className,
         )}
-        disabled={disabled}
+        type='button'
+        disabled={loading || disabled}
         {...moreProps}
       >
         <BaseIcon

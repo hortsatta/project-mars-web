@@ -20,7 +20,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang='en'>
+    <html
+      lang='en'
+      className='scrollbar-thin scrollbar-thumb-primary/30 scrollbar-track-backdrop hover:scrollbar-thumb-primary/50 active:scrollbar-thumb-primary/60'
+    >
       <body
         className={cx(
           'flex min-h-screen flex-col',

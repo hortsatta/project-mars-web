@@ -1,33 +1,35 @@
+import type { ComponentProps, JSXElementConstructor } from 'react';
+
+export type Enum = Record<string | number, string | number>;
+
 export type IconName =
+  | 'air-traffic-control'
+  | 'caret-circle-down'
   | 'cloud-fog'
   | 'cloud-snow'
+  | 'globe-simple'
   | 'magnifying-glass'
+  | 'person'
   | 'sun-horizon'
   | 'wind';
-
-export enum WeatherType {
-  Foggy = 0,
-  Snowy,
-  Sunny,
-  Windy,
-  __LENGTH,
-}
-
-export enum MarsLocation {
-  'Olympus Mons',
-  'Tharsis Volcanoes',
-  'Valles Marineris',
-  'Aeolis Mons',
-  'Ghost Dunes',
-  __LENGTH,
-}
-
-export type Weather = {
-  temp: number;
-  type: WeatherType;
-  location: MarsLocation;
-};
 
 export type ButtonVariant = 'link' | 'border';
 
 export type ButtonSize = 'base' | 'sm';
+
+export type Option = {
+  label: string | number;
+  value: string | number;
+};
+
+export type FormProps<
+  TProps extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>,
+  TData,
+  TDataReturn,
+> = Omit<ComponentProps<TProps>, 'onSubmit'> & {
+  onSubmit: (data: TData) => TDataReturn;
+  formData?: TData;
+  loading?: boolean;
+  isDone?: boolean;
+  onDone?: (isDone: boolean) => void;
+};
