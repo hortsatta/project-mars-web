@@ -1,7 +1,14 @@
+import { BaseHeaderTitle } from '#/components/base/base-header-title.component';
+import { BaseIcon } from '#/components/base/base-icon.component';
+import { BaseScene } from '#/components/base/base-scene.component';
+
 export default function ExpeditionsPage() {
   return (
-    <div>
-      <h1>My Expeditions</h1>
-    </div>
+    <BaseScene>
+      <BaseHeaderTitle title='My Expeditions' />
+      <div className='flex justify-center pt-20'>
+        <BaseIcon name='coffee' size={85} weight='light' />
+      </div>
+    </BaseScene>
   );
 }

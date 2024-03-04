@@ -35,7 +35,7 @@ export default function HomePage() {
         <HomeFeaturedDestinationsSection className='mb-[240px]' />
         <HomeMarsInfoSection className={SECTION_CLASSNAME} />
         <HomeExosuitUpgradeSection className={SECTION_CLASSNAME} />
-        <HomeGettingStartedSection className='mb-10 pb-[460px]' />
+        <HomeGettingStartedSection className='mb-10 pb-[600px]' />
       </BaseScene>
     </div>
   );

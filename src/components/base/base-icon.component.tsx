@@ -8,6 +8,7 @@ import {
   Circuitry,
   CloudFog,
   CloudSnow,
+  Coffee,
   Cpu,
   GearFine,
   GlobeSimple,
@@ -41,6 +42,8 @@ export const BaseIcon = memo(
           return CloudFog;
         case 'cloud-snow':
           return CloudSnow;
+        case 'coffee':
+          return Coffee;
         case 'cpu':
           return Cpu;
         case 'gear-fine':

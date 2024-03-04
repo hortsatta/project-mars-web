@@ -9,6 +9,7 @@ export type IconName =
   | 'circuitry'
   | 'cloud-fog'
   | 'cloud-snow'
+  | 'coffee'
   | 'cpu'
   | 'gear-fine'
   | 'globe-simple'

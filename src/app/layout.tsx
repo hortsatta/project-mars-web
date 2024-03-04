@@ -22,7 +22,7 @@ export default function RootLayout({ children }: Props) {
   return (
     <html
       lang='en'
-      className='scrollbar-thin scrollbar-track-backdrop scrollbar-thumb-primary/30 hover:scrollbar-thumb-primary/50 active:scrollbar-thumb-primary/60'
+      className='overflow-y-scroll scrollbar-thin scrollbar-track-backdrop scrollbar-thumb-primary/30 hover:scrollbar-thumb-primary/50 active:scrollbar-thumb-primary/60'
     >
       <body
         className={cx(
