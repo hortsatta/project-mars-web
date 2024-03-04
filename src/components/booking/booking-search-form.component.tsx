@@ -6,7 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import z from 'zod';
 
 import {
-  MarsLocation,
+  MarsDestination,
   Spaceport,
   destinationOptions,
   spaceportOptions,
@@ -54,7 +54,7 @@ const schema = z
       })
       .int()
       .min(0)
-      .max(MarsLocation.__LENGTH),
+      .max(MarsDestination.__LENGTH),
     dates: z.object({
       from: z
         .date({ required_error: 'Date is invalid' })
@@ -99,7 +99,7 @@ const schema = z
 
 const defaultValues: Partial<FormData> = {
   spaceport: Spaceport.Asia,
-  destination: MarsLocation['Ghost Dunes'],
+  destination: MarsDestination['Aeolis Mons'],
   dates: undefined,
   passengerCount: 1,
 };

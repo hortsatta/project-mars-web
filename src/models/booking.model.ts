@@ -1,8 +1,8 @@
-import type { MarsLocation, Spaceport } from './mars.model';
+import type { MarsDestination, Spaceport } from './mars.model';
 
 export type SearchBookingFormData = {
   spaceport: Spaceport;
-  destination: MarsLocation;
+  destination: MarsDestination;
   from: Date;
   to: Date;
   passengerCount: number;

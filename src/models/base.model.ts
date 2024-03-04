@@ -4,12 +4,17 @@ export type Enum = Record<string | number, string | number>;
 
 export type IconName =
   | 'air-traffic-control'
+  | 'arrow-fat-up'
   | 'caret-circle-down'
+  | 'circuitry'
   | 'cloud-fog'
   | 'cloud-snow'
+  | 'cpu'
+  | 'gear-fine'
   | 'globe-simple'
   | 'magnifying-glass'
   | 'person'
+  | 'planet'
   | 'sun-horizon'
   | 'wind';
 

@@ -23,11 +23,11 @@ import homeHeroCrystalLensFlarePng from '#/assets/images/home-hero-crystal-lens-
 import homeHeroSunLensFlarePng from '#/assets/images/home-hero-sun-lens-flare.png';
 import homeHeroTextBlurPng from '#/assets/images/home-hero-text-blur.png';
 
-const imageWrapperBaseClassName = 'flex h-full w-full absolute top-0 left-0';
+const IMAGE_WRAPPER_CLASSNAME = 'flex h-full w-full absolute top-0 left-0';
 
-const imageWrapperStartClassName = `${imageWrapperBaseClassName} justify-start items-start`;
+const IMAGE_WRAPPER_START_CLASSNAME = `${IMAGE_WRAPPER_CLASSNAME} justify-start items-start`;
 
-const imageWrapperEndClassName = `${imageWrapperBaseClassName} items-end`;
+const IMAGE_WRAPPER_END_CLASSNAME = `${IMAGE_WRAPPER_CLASSNAME} items-end`;
 
 const imageProps = {
   quality: 100,
@@ -76,7 +76,7 @@ export const HomeHeroSection = memo(function ({
   return (
     <div className={cx('relative h-[915px] w-fhd', className)} {...moreProps}>
       <ParallaxImageWrapper
-        className={imageWrapperStartClassName}
+        className={IMAGE_WRAPPER_START_CLASSNAME}
         parallaxDistance={2200}
       >
         <Image
@@ -88,13 +88,13 @@ export const HomeHeroSection = memo(function ({
         />
       </ParallaxImageWrapper>
       <ParallaxImageWrapper
-        className={imageWrapperStartClassName}
+        className={IMAGE_WRAPPER_START_CLASSNAME}
         parallaxDistance={2200}
       >
         <HomeHeroOrbitalDrops className='absolute left-1/2 top-0 h-full w-[1120px] -translate-x-1/2' />
       </ParallaxImageWrapper>
       <ParallaxImageWrapper
-        className={imageWrapperEndClassName}
+        className={IMAGE_WRAPPER_END_CLASSNAME}
         parallaxDistance={2400}
       >
         <Image
@@ -106,7 +106,7 @@ export const HomeHeroSection = memo(function ({
         />
       </ParallaxImageWrapper>
       <ParallaxImageWrapper
-        className={imageWrapperStartClassName}
+        className={IMAGE_WRAPPER_START_CLASSNAME}
         parallaxDistance={2400}
       >
         <Image
@@ -126,13 +126,13 @@ export const HomeHeroSection = memo(function ({
         </h1>
         <div
           style={textWrapperStyle}
-          className='flex h-[96px] w-[1080px] justify-center bg-no-repeat'
+          className='flex h-[96px] w-[1080px] justify-center bg-[length:80%_100%] bg-center bg-no-repeat'
         >
-          <h1 className='text-[130px] leading-[0.65]'>Tour the Red Planet</h1>
+          <h1 className='text-[130px] leading-[0.65]'>Explore Mars</h1>
         </div>
       </ParallaxImageWrapper>
       <ParallaxImageWrapper
-        className={imageWrapperEndClassName}
+        className={IMAGE_WRAPPER_END_CLASSNAME}
         parallaxDistance={1600}
       >
         <Image
@@ -144,7 +144,7 @@ export const HomeHeroSection = memo(function ({
         />
       </ParallaxImageWrapper>
       <ParallaxImageWrapper
-        className={imageWrapperEndClassName}
+        className={IMAGE_WRAPPER_END_CLASSNAME}
         parallaxDistance={500}
       >
         <Image
@@ -216,7 +216,7 @@ export const HomeHeroSection = memo(function ({
         />
       </ParallaxImageWrapper>
       <ParallaxImageWrapper
-        className={imageWrapperEndClassName}
+        className={IMAGE_WRAPPER_END_CLASSNAME}
         parallaxDistance={200}
       >
         <Image

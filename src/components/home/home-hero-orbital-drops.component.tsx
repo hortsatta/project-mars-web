@@ -87,7 +87,7 @@ export const HomeHeroOrbitalDrops = memo(function (
   return (
     <div {...props}>
       {list.map(({ id }) => (
-        <OrbitalDrop key={id} />
+        <OrbitalDrop key={`od-${id}`} />
       ))}
     </div>
   );

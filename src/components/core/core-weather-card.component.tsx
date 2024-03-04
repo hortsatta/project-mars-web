@@ -3,7 +3,7 @@
 import { memo, useMemo } from 'react';
 import cx from 'classix';
 
-import { WeatherType, MarsLocation } from '#/models/mars.model';
+import { WeatherType, MarsDestination } from '#/models/mars.model';
 import { BaseIcon } from '../base/base-icon.component';
 import {
   BaseTooltip,
@@ -21,7 +21,7 @@ type Props = ComponentProps<'article'> & {
 
 export const CoreWeatherCard = memo(function ({
   className,
-  weather: { temp, type, location },
+  weather: { temp, type, destination },
   ...moreProps
 }: Props) {
   const typeIconName: IconName | null = useMemo(() => {
@@ -55,7 +55,7 @@ export const CoreWeatherCard = memo(function ({
         </BaseTooltip>
       </div>
       <span className='text-xs uppercase opacity-70'>
-        {MarsLocation[location]}
+        {MarsDestination[destination]}
       </span>
     </article>
   );
