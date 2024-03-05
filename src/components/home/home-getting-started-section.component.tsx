@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import cx from 'classix';
 
 import { BaseHeaderTitle } from '../base/base-header-title.component';
@@ -65,9 +66,9 @@ const Item = memo(function ({
 export const HomeGettingStartedSection = memo(function ({
   className,
   ...moreProps
-}: ComponentProps<'section'>) {
+}: ComponentProps<typeof motion.section>) {
   return (
-    <section
+    <motion.section
       className={cx(
         'relative flex flex-col items-center gap-y-[130px]',
         className,
@@ -108,6 +109,6 @@ export const HomeGettingStartedSection = memo(function ({
           />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 });

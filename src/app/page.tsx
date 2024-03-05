@@ -1,5 +1,6 @@
 'use client';
 
+import { sectionMotionAnimation } from '#/config/animation.config';
 import { useBookingSearch } from '#/hooks/use-booking-search';
 import { BaseScene } from '#/components/base/base-scene.component';
 import { BookingSearchForm } from '#/components/booking/booking-search-form.component';
@@ -20,11 +21,7 @@ export default function HomePage() {
 
   return (
     <div className='flex flex-1 flex-col'>
-      <section className='absolute left-0 top-0 w-full overflow-hidden'>
-        <div className='relative left-1/2 flex w-fhd -translate-x-1/2 justify-center'>
-          <HomeHeroSection />
-        </div>
-      </section>
+      <HomeHeroSection {...sectionMotionAnimation} />
       <BaseScene
         className='relative z-10 flex-1 pt-[690px]'
         wrapperProps={wrapperProps}
@@ -32,10 +29,22 @@ export default function HomePage() {
         <section className='mx-auto max-w-6xl pb-[204px]'>
           <BookingSearchForm onSubmit={handleBookingSearchSubmit} />
         </section>
-        <HomeFeaturedDestinationsSection className='mb-[240px]' />
-        <HomeMarsInfoSection className={SECTION_CLASSNAME} />
-        <HomeExosuitUpgradeSection className={SECTION_CLASSNAME} />
-        <HomeGettingStartedSection className='mb-10 pb-[600px]' />
+        <HomeFeaturedDestinationsSection
+          className='mb-[240px]'
+          {...sectionMotionAnimation}
+        />
+        <HomeMarsInfoSection
+          className={SECTION_CLASSNAME}
+          {...sectionMotionAnimation}
+        />
+        <HomeExosuitUpgradeSection
+          className={SECTION_CLASSNAME}
+          {...sectionMotionAnimation}
+        />
+        <HomeGettingStartedSection
+          className='mb-10 pb-[600px]'
+          {...sectionMotionAnimation}
+        />
       </BaseScene>
     </div>
   );

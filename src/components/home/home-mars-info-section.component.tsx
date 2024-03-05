@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { motion } from 'framer-motion';
 import cx from 'classix';
 
 import { BaseHeaderTitle } from '../base/base-header-title.component';
@@ -17,9 +18,9 @@ const PROPERTY_LABEL_CLASSNAME = 'font-display uppercase tracking-normal';
 export const HomeMarsInfoSection = memo(function ({
   className,
   ...moreProps
-}: ComponentProps<'section'>) {
+}: ComponentProps<typeof motion.section>) {
   return (
-    <section
+    <motion.section
       className={cx('flex items-center justify-between', className)}
       {...moreProps}
     >
@@ -66,6 +67,6 @@ export const HomeMarsInfoSection = memo(function ({
           Your browser does not support the video tag.
         </video>
       </div>
-    </section>
+    </motion.section>
   );
 });

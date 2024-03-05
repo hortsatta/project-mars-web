@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import cx from 'classix';
 
 import { BaseHeaderTitle } from '../base/base-header-title.component';
@@ -22,9 +23,9 @@ const PROPERTY_LABEL_CLASSNAME = 'font-display uppercase tracking-normal';
 export const HomeExosuitUpgradeSection = memo(function ({
   className,
   ...moreProps
-}: ComponentProps<'section'>) {
+}: ComponentProps<typeof motion.section>) {
   return (
-    <section
+    <motion.section
       className={cx('flex items-center justify-between', className)}
       {...moreProps}
     >
@@ -79,6 +80,6 @@ export const HomeExosuitUpgradeSection = memo(function ({
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 });

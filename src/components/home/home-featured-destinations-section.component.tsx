@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import cx from 'classix';
 
 import { MarsDestination } from '#/models/mars.model';
@@ -19,9 +20,9 @@ const featuredDestinations = [
 export const HomeFeaturedDestinationsSection = memo(function ({
   className,
   ...moreProps
-}: ComponentProps<'section'>) {
+}: ComponentProps<typeof motion.section>) {
   return (
-    <section className={cx('relative', className)} {...moreProps}>
+    <motion.section className={cx('relative', className)} {...moreProps}>
       <Image
         src={featuredDestinationsBg}
         alt='trail'
@@ -37,6 +38,6 @@ export const HomeFeaturedDestinationsSection = memo(function ({
         />
         <HomeFeaturedDestinationList destinations={featuredDestinations} />
       </div>
-    </section>
+    </motion.section>
   );
 });
