@@ -100,6 +100,7 @@ export const HomeGettingStartedSection = memo(function ({
       <div className='relative z-10 mx-auto flex w-full max-w-6xl items-center rounded-sm border border-white-border'>
         {items.map(({ title, description, iconName }, index) => (
           <Item
+            key={`gsitem-${index}`}
             className={cx(
               index < items.length - 1 && 'border-r border-white-border',
             )}
