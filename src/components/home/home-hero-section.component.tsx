@@ -229,6 +229,7 @@ export const HomeHeroSection = memo(function ({
               alt='home hero gradient 1'
               width={1920}
               height={419}
+              className='absolute bottom-0'
               {...imageProps}
             />
             <div className='h-[47px] w-full bg-backdrop' />
